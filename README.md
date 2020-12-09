@@ -49,13 +49,28 @@ For this guide, let's pretend you purchased `mailbox987.com`.
 
 Follow these steps to point your new domain name to [SimpleLogin](https://simplelogin.io) to get your mail forwarding ready to use:
 
-- On [SimpleLogin](https://simplelogin.io), click on the **Domains** link on the top menu bar.
-- step
-- step
+- Log on to [Namecheap](https://namecheap.com). On the left hand menu, go to your **Domain** list.
+- Click **Manage**.
+- Scroll down on the first screen to **Mail Settings**.
+- Enter the information exactly the way you see it depicted below. Select **Custom MX** from the dropdown menu.
+- You will make two records, both hosts will be set to `@`.
+The first record will have the target (or value) of `mx1.simplelogin.co` with a priority of `10`.
+- The second record will have the target/value of `mx2.simplelogin.co` and set the priority to `20`.
 
 ![MX Records setup in Namecheap](namecheapMXrecord.png)
 
 *Note: if you use a different domain registrar this may or may not work. Separate instructions are available on SimpleLogin.*
+
+- Now head back to [SimpleLogin](https://simplelogin.io) and click on the **Domains** link on the top menu bar.
+- Type in your new domain name. For this example, `mailbox987`.
+- And for the default mailbox, enter your private/main email address where you want your mail forwarded to. In this example: `mymainsecretemail@protonmail.com`
+- You will need to **verify** that your purchased domain has been properly configured. To do this, click on **Details** under the domain name.
+- Then, click on the **DNS** link on the right hand menu.
+- Under the first section, labeled **MX Records**, click the **Verify** button.
+*Note: you may have to wait just a little while after setting up the MX Record on [Namecheap](https://namecheap.com). Also, if you scroll down, you will see MX records are not the only option to connect a domain. But using [Namecheap](https://namecheap.com), this is the way to go.*
+
+Once verified, you're ready to start using your own domain name with email aliases!
+
 
 ### Using Directories for Wildcards and Creating Aliases on the Fly <a name="wildcardalias"></a>
 
@@ -80,6 +95,12 @@ Note: The alias must be in lowercase.
 These email aliases can be created on the fly! Let's say I wanted to sign up for a newsletter. Right there on the sign up form, I can type in `freelance+news2@simplelogin.co` and when they send an email to that alias, it gets created automagically!
 
 And if you set everything up correctly, the emails will go to your main email account: `mymainsecretemail@protonmail.com` which no one will ever see because if you reply to an email, it shows as coming from that alias! It's really awesome.
+
+#### Word of Caution about Directory Names
+
+My suggestion is: if you are using directories, you may not want to use something like `shopping` or `work` (if they're even available) because someone else may try to make aliases on-the-fly using those words, maybe thinking it's one of their own directories and *you* will start receiving their emails.
+
+So if you want a directory called `freelance` try something a little more customized like `freelance56`. Just add a little something extra to it. It'll be more likely that that domain is available and less likely someone might accidently create an alias on-the-fly using that directory name.
 
 ### Creating Aliases Using Your Own Domain Name <a name="alias"></a>
 
@@ -112,4 +133,3 @@ Related Article: [Learn how to send an email as your alias](sendingemailsfromali
 [Norton Safe Web](https://safeweb.norton.com/)
 
 [The Wayback Machine](https://web.archive.org/)
-
